@@ -20,15 +20,15 @@ Edit
         @csrf
         @method('PUT')
         <div class="mb-3">
-            <label class="block">Title</label>
+            <label class="block mb-1">Title</label>
             <input name="title" type="text" value="{{ old('title', $post->title) }}" class="border-2 w-full rounded py-1 px-2 text-sm text-gray-600 outline-none border-slate-700">
         </div>
         <div class="mb-3">
-            <label class="block">Description</label>
+            <label class="block mb-1">Description</label>
             <textarea name="description" class="border-2 w-full rounded py-1 px-2 text-sm text-gray-600 outline-none border-slate-700">{{ old('description', $post->description) }}</textarea>
         </div>
         <div class="mb-3">
-            <label class="block">Category</label>
+            <label class="block mb-1">Category</label>
             <select name="category_id" class="border-2 w-full rounded py-1 px-2 text-sm text-gray-600 outline-none border-slate-700">
                 <option value="" disabled {{ old('category_id', $post->category_id) ? '' : 'selected' }}>Select a category</option>
                 <option value="1" {{ old('category_id', $post->category_id) == '1' ? 'selected' : '' }}>Technology</option>
